@@ -26,25 +26,26 @@
             <li>The link element connets an external resource to the HTML document</li>
             <li>The meta element defines metadata such as character set, description, keywords, etc.</li>
             <li>The script element embeds client-side scripts in the HTML document</li>
+            <li>Use href to specify the location of an external resource. This uses a relative path, and the location is derived from the current location.</li>
           </ul>
       </section>
       <br>
       <section class="card" id="css-section">
         <h2>CSS</h2>
         <ul>
-          <li>Enter CSS notes here</li>
+          <li>Inline CSS are applied directly in the HTML file. They apply specifically to one HTML tag. E.g. attributes within an element</li>
+          <li>Internal CSS style sheets contain rules for the webpage in the [head] section of the HTML file. When done like this, they only apply to that page and can contain classes and IDs to identify elements</li>
+          <li>External CSS style sheets are the most common and are a separate file that contains all the rules. These are linked to the file using [link] within [head]</li>
+          <li>A selector defines the element or atatributes to which the declarations will apply</li>
+          <li>A declaration is made up of a property and a value.</li>
+          <li>You can combine two selectors within a single CSS rule with a comma. Declarations within will affect both/all.</li>
+          <li>A margin indicates how much space we want around the outside of the element and are not visible/</li>
+          <li>Padding is different to margin in that it adds space around the content inside an element. Larger padding means larger element as it is inside an element.</li>
         </ul>
       </section>
       <br>
       <section class="card" id="git-section">
         <h2>Git</h2>
-        <h3>Setup:</h3>
-        <ul>
-          <li>git config - -global user.name “[firstname lastname]”: Set a name that is identifiable for credit when review version history</li>
-          <li>git config - -global user.email “[valid-email]” - set an email address that will be associated with each history marker</li>
-          <li>git config - - global colour.ui auto: set automatic command line colouring for Git for easy reviewing</li>
-        </ul>
-        <br>
         <h3>Initialization</h3>
         <ul>
           <li>git init: initialize an existing directory as a git repository</li>
@@ -64,18 +65,66 @@
         <h3>Branch & Merge</h3>
         <ul>
           <li>git branch: list your branches. an asterisk will appear next to the currently active branch</li>
-          <li>git branch [branch name]: create a new branch at the current commit</li>
+          <li>git -b [branch name]: create a new branch at the current commit</li>
           <li>git checkout: switch to another branch and check it out into your working directory </li>
           <li>git merge [branch]: merge the speicified branch's history into the current one</li>
           <li>git log: show all commits in the current branch's history</li>
         </ul>
+        <br>
+        <h3>Share & Update</h3>
+        <ul>
+          <li>git remote add [alias] [url]: add git URL as an alias</li>
+          <li>git fetch [alias]: fetch down all branches from that Git remote</li>
+          <li>git merge [alias]/[branch]: merge a remote branch into your current brance to bring it up to date</li>
+          <li>git push [alias] [branch]: transmit local branch commits to the remote repository branch</li>
+          <li>git pull: fetch and merge any commits from the tracking remote branch</li>
+        </ul>
+        <br>
+        <h3>Git Version Control</h3>
+        <br>
+       <p>Make sure you're not working on main and have created a new branch. Check with git status.
+        <br>
+        Any unsaved changes will appear after git status.
+        </p>
+        <br>
+        <ul>
+          <li>-add: adds mods in the current branch to the staging area</li>
+          <li>-A or --all: indicates add all changes</li>
+          <li>git commit -m "message here": create snapshop of current changes with the comment</li>
+        </ul>
+        <br>
+        <p>Before pushing to repo, check that the local branch is in sync with the base branch with: git pull origin main</p>
+        <br>
+        <ul>
+          <li>-pull: receives a branch's mods into the local environment</li>
+          <li>-origin: indicates source of the pull will be the GitHub repo </li>
+          <li>main: indicates the branch in this instance</li>
+        </ul>
+        <br>
+        <p>Therefore: git pull origin main pulls modifications from the main branch in the GitHub repo to local environment.
+        </p>
+        <br>
+       <p>Once synced, push changes with git push origin (branch)
+        </p>
+        <br>
+        <ul>
+          <li>-push: pushes changes made locally</li>
+          <li>-origin: indicates destination of push (origin indicates github repo)</li>
+        </ul>
+        <br><p>Then check GitHub for changes. From here we can create PRs and merge into main. Make sure in the PR that the arrow goes from branch to main.
+        </p>
       </section>
       <br>
       <section class="card" id="javacsript-section">
         <h2>JavaScript</h2>
         <ul>
-          <li>A variable is a named container that allows us to store data in our code.</li>
+          <li>A variable is a named container that allows us to store data in our code. Declare a variable by using the let or var keywords, followed by the name of the variable. Variables are case-sensitive.</li>
           <li>Control flow is the order in which a computer executes code in a script.</li>
+          <li>Comments are snippets of text added alongside code. Usually to indicate something to person working/reading the code.</li>
+          <li>Operators are mathematical symbols that produce a result based on two values (or variables).</li>
+          <li>Conditionals are code structures used to test if an expression returns true or not. E.g. if(). The expression inside the parentheses is the test.</li>
+          <li>Functions are a way of packaging functionality that is to be reused. You can define a body of code as a function that executes when you call the function name in the code. It is a good alternative to repeatedly writing the same code. Anything that looks like a vairable name, but is followed by parentheses, is likely a function. Functions take 'arguments' which is the data that they need to run and can be separated by commmas if there is more than 1 argument.</li>
+          <li>Events are code structures that listen for activity in the browser, and run code in response.</li>
         </ul>
       </section>
     </main>
